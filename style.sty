@@ -1,0 +1,23 @@
+
+\usepackage[utf8]{inputenc}
+
+\makeatletter
+\newcommand{\chapterauthor}[1]{%
+  {\parindent0pt\vspace*{-25pt}%
+  \linespread{1.1}\large\scshape#1%
+  \par\nobreak\vspace*{35pt}}
+  \@afterheading%
+}
+\makeatother
+
+\addtopsmarks{headings}{}{
+  \createmark{chapter}{left}{nonumber}{}{}
+}
+
+\pagestyle{headings}
+
+\setcounter{secnumdepth}{-1}
+
+\newcommand{\firstletter}[1]{%
+  \textbf{\large #1\normalsize}%
+}
